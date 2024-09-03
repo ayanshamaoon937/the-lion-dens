@@ -1,0 +1,763 @@
+$primary: #EE4224;
+$secondary: #447A81;
+$light: #97D6DE;
+$dark: #000000;
+$border-color: #DBDBDB;
+$light-50: #E6E6E6;
+$border-color-2: #373737;
+$danger: #FA3E1B;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@font-face {
+  src: url("../fonts/revansMedium.ttf");
+  font-family: revansMedium;
+}
+
+@font-face {
+  src: url("../fonts/revans-bold.ttf");
+  font-family: revans-bold;
+}
+
+body {
+  overflow: hidden !important;
+  background: $dark;
+  transition: background-color 0.5s ease;
+}
+
+.border-color {
+  border-color: $border-color !important;
+}
+
+.text-light-50 {
+  color: $light-50;
+}
+
+.border-color-2 {
+  border-color: $border-color-2 !important;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+.fs-18 {
+  font-size: 18px;
+}
+
+.fs-20 {
+  font-size: 20px;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fw-800 {
+  font-weight: 800;
+}
+
+.fw-900 {
+  font-weight: 900;
+}
+
+
+.grid-container {
+  display: grid;
+  width: 100vw; /* Adjust as needed */
+  height: 100vh; /* Adjust as needed */
+  grid-template-columns: 80px calc(100% - 80px);
+  grid-template-rows: 100px calc(100% - 100px);
+}
+
+.btn-primary {
+  background-color: $primary;
+  color: $white;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  padding: 13px 20px 11px 20px;
+  border-radius: 2px;
+  letter-spacing: 0.358px;
+
+  &:hover {
+    background-color: $primary;
+
+    svg {
+      path {
+        stroke: $dark;
+      }
+    }
+  }
+}
+
+.hamburger {
+  grid-row: 1;
+  grid-column: 1;
+  //background-color: $dark;
+
+  .bg-primary {
+    position: fixed;
+    top: 100px;
+    min-height: calc(100vh - 100px);
+    right: 0;
+    left: 0;
+    z-index: 999;
+  }
+
+
+}
+
+.scrollerWrapper {
+  grid-row: 1 / span 2;
+  grid-column: 1 / 2;
+
+  .scroller {
+    width: 2px;
+    height: 274px;
+    flex-shrink: 0;
+    left: 35px;
+    background-color: $border-color;
+
+    svg {
+      background-color: $dark;
+      border-radius: 50%;
+    }
+  }
+}
+
+.nav-content {
+  grid-row: 1;
+  grid-column: 2;
+
+  img {
+    max-width: 150px;
+  }
+}
+
+.main-content-grid {
+  grid-row: 2;
+  grid-column: 2;
+
+  .main-page-wrapper {
+    .first-section {
+
+      .video-js {
+        background: transparent;
+      }
+
+      .content {
+        .display-1 {
+          font-family: revans-bold;
+        }
+
+        padding-top: 100px;
+        padding-bottom: 150px;
+      }
+
+      .video-container {
+        padding-bottom: 30px;
+        padding-right: 30px;
+
+        .vjs-poster {
+          img {
+            border-radius: 16px !important;
+          }
+
+        }
+
+        video {
+          width: 346px;
+          height: auto;
+          border-radius: 16px !important;
+
+        }
+
+      }
+    }
+
+    .second-section {
+      background-image: url("../images/bg-lines.png");
+      min-height: calc(100vh - 100px);
+      width: 100%;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+
+      .content {
+        .display-4 {
+          font-family: revansMedium;
+          letter-spacing: 1px;
+          line-height: 1.2;
+        }
+      }
+    }
+
+    .third-section {
+      .title {
+        background-image: url("../images/third-section.svg");
+        background-repeat: no-repeat;
+      }
+
+      .h3 {
+        font-family: revans-bold;
+      }
+
+      .who-we-card {
+        margin-top: 100pxq;
+
+        .row {
+          background-color: #9CDBE2;
+        }
+
+        .content {
+          &:before {
+            content: url("../images/icons/line.svg");
+          }
+
+          .text {
+            font-family: "Raleway", sans-serif;
+          }
+        }
+      }
+    }
+
+    .forth-section {
+      .profile-card-wrapper {
+        padding-top: 5rem;
+
+        .profile-card {
+          h4 {
+            font-family: revans-bold;
+          }
+
+          img {
+            min-height: 455px;
+          }
+
+          a {
+            font-family: "Raleway", sans-serif;
+            text-decoration: none;
+
+            &:hover {
+              color: $primary !important;
+
+              span {
+                color: $dark !important;
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+
+  .breadcrumWrapper {
+    max-height: calc(100%);
+
+    .breadcrum-bg {
+      background-repeat: repeat;
+      background-image: url("../images/breadcrum-bg.svg");
+      min-height: 190px;
+
+      .display-1 {
+        font-family: revansMedium;
+      }
+
+      &.home_page {
+        background-repeat: repeat;
+        background-image: url("../images/third-section.svg");
+        min-height: 190px;
+      }
+
+      &.home_page_talent {
+        background-repeat: repeat;
+        background-image: url("../images/talent-breadcrum.svg");
+        min-height: 185px;
+      }
+    }
+
+    .position-absolute {
+      bottom: 5px;
+    }
+
+    //&:hover {
+    //  filter: invert(100%);
+    //}
+  }
+
+  .content {
+    h2 {
+      font-family: revansMedium;
+    }
+  }
+.service-wrapper{
+  .serviceCard {
+    min-height: 450px;
+    padding-top: 5rem;
+    border-color: #373737 !important;
+
+    .cardContent {
+      .display-4 {
+        font-family: revans-bold;
+        color: rgba(255, 70, 36, 0.3);
+        z-index: 0;
+        top: -2.5rem;
+        left: -0.9rem;
+      }
+
+      h3 {
+        font-family: revans-bold;
+      }
+
+    }
+
+    .pillsWrapper {
+      span {
+        background: #1B1B1B;
+        padding-top: 8px;
+        padding-bottom: 7px;
+        font-family: "Raleway", sans-serif;
+        letter-spacing: 0.288px;
+      }
+    }
+  }
+  .row{
+    &.border{
+      border-color: #373737 !important;
+      margin-bottom: 7rem;
+    }
+  }
+}
+
+
+  .ctaWrapper {
+    padding-bottom: 5rem;
+
+    .cta-bg {
+      background-repeat: repeat;
+      background-image: url("../images/cta-bg.svg");
+
+      .display-1 {
+        font-family: revansMedium;
+      }
+
+      .btnWrapper {
+        a {
+          h4 {
+            font-family: "Raleway", sans-serif;
+            letter-spacing: 0.538px;
+          }
+
+          span {
+            color: $light-50;
+            font-family: "Raleway", sans-serif;
+            letter-spacing: 0.358px;
+          }
+        }
+
+        &.first {
+          background: url("../images/icons/star.svg"), $primary;
+          background-repeat: no-repeat;
+          background-repeat: no-repeat;
+          background-position-y: center;
+          background-position-x: left;
+
+        }
+
+        &.last {
+          background: url("../images/icons/opposite-arrow.svg"), $secondary;
+          background-repeat: no-repeat;
+          background-position-y: center;
+          background-position-x: left;
+        }
+
+
+      }
+    }
+  }
+
+  .newsLetter {
+    .row {
+      .col-lg-4 {
+        padding-top: 10rem;
+      }
+
+      .h4, ul li a {
+        font-family: revans-bold;
+      }
+
+      input {
+        color: #B0B0B0;
+        font-family: "Raleway", sans-serif;
+
+        &::placeholder {
+          color: #B0B0B0;
+        }
+
+        &:focus-visible, &:focus {
+          box-shadow: unset;
+          border: unset;
+          outline: unset;
+        }
+      }
+    }
+
+  }
+
+  .biography-content-Wrapper {
+    .biography-img {
+      .name {
+        &.top-right {
+          -webkit-text-stroke-width: 3px;
+          -webkit-text-stroke-color: #FFF;
+          letter-spacing: 1.984px;
+          transform: rotate(-90deg);
+          top: 2.3rem;
+          right: -1.7rem;
+          color: transparent;
+        }
+
+        &.bottom-right {
+          -webkit-text-stroke-width: 3px;
+          -webkit-text-stroke-color: #FFF;
+          letter-spacing: 1.984px;
+          transform: rotate(-90deg);
+          bottom: 5rem;
+          right: -4rem;
+          color: transparent;
+        }
+
+      }
+    }
+
+    .biography-content {
+      .h1 {
+        font-family: revans-bold;
+        letter-spacing: 1.008px;
+      }
+
+      p {
+        letter-spacing: 0.48px;
+        font-size: 22px;
+        font-family: "Raleway", sans-serif;
+      }
+
+      .social {
+        a {
+          width: 54px;
+          height: 54px;
+          transition: 0.2s all ease-in-out;
+
+          &:hover {
+            background-color: $white;
+            transition: 0.2s all ease-in-out;
+            transform: translateY(-10px);
+
+            svg {
+              path {
+                fill: $dark;
+                stroke: $dark;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .menu {
+    .link {
+      &.home {
+        border-radius: 12px;
+        background: url("../images/icons/star-2-black.svg"), #282828;
+        background-repeat: no-repeat;
+        background-position: right top;
+        min-height: 300px;
+        font-family: revans-bold;
+
+        &:hover {
+          background: url("../images/icons/star-2.svg"), $primary;
+          background-repeat: no-repeat;
+          background-position: right top;
+        }
+      }
+
+      &.service {
+        border-radius: 12px;
+        background: url("../images/icons/service-black.svg"), #282828;
+        background-repeat: no-repeat;
+        background-position: right top;
+        min-height: 300px;
+        font-family: revans-bold;
+
+        &:hover {
+          background: url("../images/icons/service.svg"), $primary;
+          background-repeat: no-repeat;
+          background-position: right top;
+        }
+      }
+
+      &.talent {
+        border-radius: 12px;
+        background: url("../images/icons/talent-black.svg"), #282828;
+        background-repeat: no-repeat;
+        background-position: right top;
+        min-height: 300px;
+        font-family: revans-bold;
+
+        &:hover {
+          background: url("../images/icons/talent.svg"), $primary;
+          background-repeat: no-repeat;
+          background-position: right top;
+        }
+      }
+
+      &.contact-us {
+        border-radius: 12px;
+        background: url("../images/icons/contact-us-black.svg"), #282828;
+        background-repeat: no-repeat;
+        background-position: right top;
+        min-height: 300px;
+        font-family: revans-bold;
+
+        &:hover {
+          background: url("../images/icons/contact-us.svg"), $primary;
+          background-repeat: no-repeat;
+          background-position: right top;
+        }
+      }
+
+    }
+  }
+
+  .contact-Wrapper {
+
+    .contact-information {
+      &.h1 {
+        letter-spacing: 0.768px;
+        font-family: revans-bold;
+      }
+
+      a {
+        font-family: "Raleway", sans-serif;
+      }
+    }
+
+    .btnWrapper {
+      cursor: pointer;
+
+      h4 {
+        font-family: "Raleway", sans-serif;
+        letter-spacing: 0.538px;
+      }
+
+      span {
+        color: $light-50;
+        font-family: "Raleway", sans-serif;
+        letter-spacing: 0.358px;
+      }
+
+      &.first {
+        background: url("../images/icons/star-black.svg"), #0C0C0C;
+        background-repeat: no-repeat;
+        background-repeat: no-repeat;
+        background-position-y: center;
+        background-position-x: left;
+        border: 2px solid #2C2C2C;
+
+        &:hover, &.active {
+          background: url("../images/icons/star.svg"), $primary !important;
+          background-repeat: no-repeat !important;
+          background-position-y: center !important;
+          background-position-x: left !important;
+          border: 2px solid $primary !important;
+        }
+      }
+
+      &.last {
+        background: url("../images/icons/opposite-arrow-black.svg"), #0C0C0C;
+        background-repeat: no-repeat;
+        background-position-y: center;
+        background-position-x: left;
+        border: 2px solid #2C2C2C;
+
+        &:hover, &.active {
+          background: url("../images/icons/opposite-arrow.svg"), $secondary;
+          background-repeat: no-repeat;
+          background-position-y: center;
+          background-position-x: left;
+          border: 2px solid $secondary;
+        }
+      }
+
+
+    }
+
+    .form-Wrapper {
+      padding-bottom: calc(100vh - 500px);
+
+      h1 {
+        font-family: revans-bold;
+      }
+
+      label {
+        font-family: "Raleway", sans-serif;
+
+        span {
+          color: #ABAFB1;
+        }
+      }
+
+      input, select, textarea {
+        font-family: "Raleway", sans-serif;
+        border-radius: 8px;
+        border: 1px solid $border-color;
+        resize: none;
+
+        &:focus-visible, &:focus {
+          border-color: $primary;
+          color: $white;
+          outline-color: unset !important;
+          box-shadow: unset !important;
+        }
+
+        &::placeholder {
+          color: #646464 !important;
+          font-family: Raleway;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+
+      input[type="checkbox"] {
+        font-family: "Raleway", sans-serif;
+        border-radius: 4px;
+        border: 1px solid $border-color;
+
+        &:focus-visible, &:focus {
+          border-color: $white;
+          outline-color: unset !important;
+          box-shadow: unset !important;
+        }
+      }
+
+      .custom-select {
+        .title {
+          font-family: "Raleway", sans-serif;
+        }
+
+        .itemWrapper {
+          border-radius: 8px;
+          border: 1px solid $border-color;
+          opacity: 0;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.4s ease, opacity 0.4s ease;
+          z-index: 1000;
+
+          &.show {
+            opacity: 1;
+            max-height: 300px;
+          }
+
+          .item {
+            &.country {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .select-options {
+        .pill {
+          font-family: "Raleway", sans-serif;
+          min-width: 100px;
+          font-size: 16px;
+          border-radius: 4px;
+          border: 1px solid #5B251B;
+          background: #121212;
+          padding: 5px 15px;
+          display: inline-block;
+          margin-right: 10px;
+          margin-top: 5px;
+          color: $white;
+
+          span {
+            cursor: pointer;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+
+    .talent_tab {
+      display: none;
+    }
+  }
+}
+
+.ball {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: 3px solid $primary;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99;
+}
+
+.change-body-color {
+  background-color: $white;
+
+  .hamburger {
+    #hamburger {
+      filter: invert(1);
+    }
+  }
+
+  .scrollerWrapper {
+    .scroller {
+      svg {
+        background-color: $white;
+        stroke: $dark;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
